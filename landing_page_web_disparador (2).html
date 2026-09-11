@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Disparador - Automatize seu WhatsApp sem Mensalidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        },
+                        dark: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-glow {
+            box-shadow: 0 20px 50px -10px rgba(34, 197, 94, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-slate-900">Web <span class="text-brand-600">Disparador</span></span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#recursos" class="hover:text-brand-600 transition-colors">Recursos</a>
+                <a href="#bonus" class="hover:text-brand-600 transition-colors">Bônus PDF</a>
+                <a href="#preco" class="hover:text-brand-600 transition-colors">Preço</a>
+                <a href="#faq" class="hover:text-brand-600 transition-colors">Dúvidas</a>
+            </nav>
+
+            <a href="#preco" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-brand-500/20 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
+                Garantir Acesso
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-6">
+                <!-- Top Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs sm:text-sm font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    Sem Mensalidades • Pagamento Único Vitalício
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Automatize seus envios no WhatsApp <span class="gradient-text">sem pagar mensalidade</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-lg sm:text-xl text-slate-600 font-normal leading-relaxed">
+                    Pare de perder horas digitando mensagem por mensagem. Confirme agendamentos, recupere clientes inativos e envie novidades com poucos cliques.
+                </p>
+
+                <!-- Action Button -->
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#preco" class="w-full sm:w-auto bg-gradient-to-r from-brand-500 to-emerald-600 hover:from-brand-600 hover:to-emerald-700 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-xl shadow-brand-500/30 hover:shadow-2xl hover:shadow-brand-500/40 transform hover:-translate-y-1 transition-all flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-bolt"></i>
+                        Garantir Acesso Vitalício por R$ 79,90
+                    </a>
+                </div>
+
+                <p class="text-xs text-slate-500 flex items-center justify-center gap-4 pt-2">
+                    <span><i class="fa-solid fa-shield-halved text-brand-600 mr-1"></i> Garantia de 7 dias</span>
+                    <span><i class="fa-solid fa-download text-brand-600 mr-1"></i> Download Imediato</span>
+                </p>
+            </div>
+
+            <!-- VSL / Video Container Placeholder -->
+            <div class="mt-12 max-w-4xl mx-auto">
+                <div class="relative rounded-3xl overflow-hidden bg-slate-900 border-4 border-white shadow-2xl hero-glow aspect-video flex items-center justify-center group cursor-pointer" id="video-placeholder">
+                    <!-- Embedded Video Mock / Placeholder -->
+                    <div class="absolute inset-0 bg-cover bg-center opacity-40 transition-opacity group-hover:opacity-30" style="background-image: url('https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=1200&q=80');"></div>
+                    
+                    <div class="relative z-10 text-center p-6">
+                        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full bg-brand-500 text-white flex items-center justify-center shadow-lg shadow-brand-500/50 transform group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1"></i>
+                        </div>
+                        <p class="mt-4 text-white font-semibold text-sm sm:text-base tracking-wide uppercase">Veja a ferramenta funcionando na prática (2 min)</p>
+                    </div>
+
+                    <!-- Hidden iframe ready to receive actual YouTube/Vimeo embed URL -->
+                    <!-- <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem vs Solution Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Por que continuar fazendo manualmente?</h2>
+                <p class="text-slate-600 mt-3">Veja a diferença entre a rotina tradicional e a automação com o Web Disparador.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Manual Pain Card -->
+                <div class="p-8 rounded-3xl bg-rose-50/50 border border-rose-100 space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Processo Manual e Cansativo</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-rose-500 mt-1"></i>
+                            <span>Horas gastas copiando e colando a mesma mensagem para dezenas de clientes.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-rose-500 mt-1"></i>
+                            <span>Mensagens impessoais sem o nome correto da pessoa.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-rose-500 mt-1"></i>
+                            <span>Mensalidades caras de sistemas web que cobram até R$ 200/mês.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Automated Solution Card -->
+                <div class="p-8 rounded-3xl bg-emerald-50/50 border border-emerald-100 space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Com o Web Disparador</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+                            <span>Disparos automáticos diretamente da sua lista do Excel ou WhatsApp.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+                            <span>Personalização com nome, dados específicos e anexos de fotos.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+                            <span>Pagamento único de R$ 79,90 com acesso vitalício no seu computador.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="recursos" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Recursos Principais</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Tudo o que você precisa para gerenciar sua comunicação</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Integração com Excel</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Importe suas planilhas facilmente e personalize a mensagem com o nome e dados únicos de cada cliente.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Timer Anti-Bloqueio</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Alterne o intervalo dos disparos (ex: 25 a 30 segundos) simulando comportamento humano e mantendo seu chip seguro.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Imagens e Fotos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Envie artes promocionais, fotos de produtos e panfletos digitais junto com a mensagem de forma 100% automatizada.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Instalação Local Segura</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">O sistema roda diretamente no seu computador Windows. Seus contatos e dados não ficam salvos em servidores terceiros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Bonus Section -->
+    <section id="bonus" class="py-20 bg-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-8 sm:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-10">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div class="relative">
+                        <div class="w-48 h-64 bg-gradient-to-tr from-brand-600 to-emerald-400 rounded-2xl shadow-2xl flex flex-col justify-between p-6 text-white transform -rotate-3 hover:rotate-0 transition-transform">
+                            <div>
+                                <i class="fa-solid fa-book-open text-3xl mb-4"></i>
+                                <h4 class="font-extrabold text-lg leading-tight">Guia Avançado de Boas Práticas</h4>
+                            </div>
+                            <div class="text-xs opacity-90">
+                                <p class="font-semibold">Bônus Exclusivo PDF</p>
+                                <p>Segurança & Anti-Bloqueio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/3 space-y-4 text-center md:text-left">
+                    <span class="bg-brand-500/20 text-brand-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full inline-block">Bônus Incluso Grátis</span>
+                    <h3 class="text-2xl sm:text-3xl font-bold">Guia Completo de Instalação e Uso Seguro do WhatsApp</h3>
+                    <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                        Junto com a ferramenta, você receberá um e-book em PDF detalhado mostrando o passo a passo de instalação e as melhores estratégias para interagir com sua base de clientes com total segurança.
+                    </p>
+                    <ul class="text-sm text-slate-300 space-y-2 pt-2">
+                        <li class="flex items-center gap-2 justify-center md:justify-start">
+                            <i class="fa-solid fa-check text-brand-400"></i> Como configurar aquecimento de chips e temporizadores.
+                        </li>
+                        <li class="flex items-center gap-2 justify-center md:justify-start">
+                            <i class="fa-solid fa-check text-brand-400"></i> Boas práticas de comunicação responsável e opt-in de clientes.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="preco" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-xl mx-auto bg-white border-2 border-brand-500 rounded-3xl p-8 sm:p-10 shadow-2xl relative">
+                <!-- Highlight Badge -->
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-500 text-white font-bold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md">
+                    Oportunidade Única
+                </div>
+
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Acesso Vitalício ao Web Disparador</h3>
+                    <p class="text-slate-600 text-sm">Sem assinaturas recorrentes. Compre uma vez, use para sempre.</p>
+
+                    <div class="py-6 border-y border-slate-100">
+                        <span class="text-slate-400 line-through text-lg">De R$ 149,90</span>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-slate-900 mt-1">
+                            R$ 79<span class="text-2xl font-bold">,90</span>
+                        </div>
+                        <span class="text-xs text-brand-600 font-semibold uppercase tracking-wider block mt-1">Pagamento Único • Sem Mensalidade</span>
+                    </div>
+
+                    <ul class="space-y-3 text-left text-sm text-slate-600 py-2">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-brand-600"></i> Licença para a versão atual do WhatsApp Web
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-brand-600"></i> Disparos ilimitados (Texto + Imagens) para sua base
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-brand-600"></i> Bônus PDF: Guia de Instalação e Boas Práticas
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-brand-600"></i> Suporte e instruções de uso inclusos
+                        </li>
+                    </ul>
+
+                    <!-- CTA Button -->
+                    <!-- REPLACE THE href BELOW WITH YOUR CHECKOUT URL -->
+                    <a href="https://pay.kiwify.com.br/YOUR_LINK_HERE" target="_blank" class="block w-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg py-4 rounded-xl shadow-lg shadow-brand-500/30 hover:shadow-xl transition-all transform hover:-translate-y-0.5 mt-6">
+                        Comprar Agora com Segurança
+                    </a>
+
+                    <div class="flex items-center justify-center gap-6 pt-4 text-slate-400 text-xs">
+                        <span><i class="fa-solid fa-lock"></i> Pagamento Seguro</span>
+                        <span><i class="fa-solid fa-rotate-left"></i> 7 Dias de Garantia</span>
+                    </div>
+
+                    <!-- Software Version Notice -->
+                    <div class="mt-6 pt-4 border-t border-slate-100 text-slate-400 text-xs text-center leading-relaxed">
+                        <i class="fa-solid fa-circle-info text-slate-400 mr-1"></i>
+                        <span>Licença válida para a versão atual do WhatsApp Web. Em caso de atualizações estruturais da plataforma Meta que exijam reengenharia do software, novas edições de atualização estarão disponíveis por uma taxa simbólica de ajuste.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Perguntas Frequentes</h2>
+                <p class="text-slate-600 mt-2">Tire suas dúvidas antes de adquirir a ferramenta.</p>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>Como receberei o acesso após a compra?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-slate-600 text-sm hidden faq-content">
+                        Assim que o pagamento for confirmado, você receberá automaticamente em seu e-mail o link para baixar o executável da ferramenta e o PDF com o Guia Completo de Instalação e Boas Práticas.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>O pagamento é realmente único? Há mensalidades?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-slate-600 text-sm hidden faq-content">
+                        Sim! O valor de R$ 79,90 é taxa única. Você paga apenas uma vez e utiliza o software no seu computador sem nenhum tipo de mensalidade.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>Existe risco de ter meu número bloqueado?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-slate-600 text-sm hidden faq-content">
+                        A ferramenta possui um temporizador ajustável (ex: alternando de 25 a 30 segundos) que simula o comportamento de envio humano. Além disso, disponibilizamos o Guia em PDF com todas as práticas recomendadas para garantir a segurança da sua conta.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>O que acontece se o WhatsApp Web for atualizado no futuro?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-slate-600 text-sm hidden faq-content">
+                        O software é compatível com a versão atual do WhatsApp Web. Caso a Meta faça alterações profundas no código do WhatsApp que exijam o desenvolvimento de uma nova versão do programa, disponibilizaremos a atualização para quem já é cliente com um desconto especial e taxa simbólica de ajuste (apenas R$ 30,00).
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>Qual é a política de garantia?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-slate-600 text-sm hidden faq-content">
+                        Oferecemos garantia incondicional de 7 dias. Se você testar a ferramenta e achar que ela não atende às suas necessidades, pode solicitar o reembolso total diretamente na plataforma.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-400 py-12 border-t border-slate-800 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-md bg-brand-500 flex items-center justify-center text-white text-xs">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <span class="font-bold text-white">Web Disparador</span>
+            </div>
+            <p>© 2026 Web Disparador. Todos os direitos reservados.</p>
+            <p class="text-slate-500 text-xs">Este site não possui vínculo oficial com o WhatsApp Inc. ou Meta Platforms.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Interactive FAQ Accordion Logic
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle current item
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>
